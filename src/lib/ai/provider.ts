@@ -262,7 +262,7 @@ function getGeminiConfiguration(): {
 
   const model =
     process.env.GEMINI_MODEL?.trim() ||
-    "gemini-2.5-flash";
+    "gemini-3.8-flash";
 
   if (!apiKey) {
     return null;
