@@ -1,3 +1,4 @@
+
 version: 1
 frontend:
   phases:
@@ -6,6 +7,7 @@ frontend:
         - npm ci
     build:
       commands:
+        - env | grep -e '^GEMINI_API_KEY=' >> .env.production
         - npm run build
   artifacts:
     baseDirectory: .next
